@@ -12,6 +12,8 @@ const galleryMarkup = createGallery(galleryItems);
 galleryListEl.addEventListener('click', onGalleryImgClick);
 galleryListEl.insertAdjacentHTML('afterbegin', galleryMarkup);
 
+
+
 function createGallery(items) {
     return items.map(({ preview, original, description }) => {
         return `<li class="gallery__item">
@@ -28,7 +30,7 @@ function onGalleryImgClick(event) {
         return;
     }
 };
- const lightbox = new SimpleLightbox('.gallery a', {
+ new SimpleLightbox('.gallery a', {
         captionsData: 'alt',
         captionDelay: 250
     });
